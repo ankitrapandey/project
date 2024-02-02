@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+    <center><h1><b>Card generator</b></h1>
+        <form onsubmit="return myData()" action="index.html">
+            enterName=<input type="text" pattern="[A-Za-z]+" id="first"><br><br>
+            <input type="submit" value="login">
+        </form>
+    </center>
+    <script>
+        function myData() {
+            var a = document.getElementById("first").value;
+            if (a == "") {
+                alert("Fields are compulsory");
+                return false;
+            } else if (a.length !== 5) {
+                alert("Name is not valid. It should be 5 characters long.");
+                return false;
+            }
+            else {
+          sessionStorage.setItem("enterName", a);
+          return true;
+        }
+    }
+    </script>
+</body>

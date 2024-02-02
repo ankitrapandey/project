@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box-1,
+    #box-2,
+    #box-3,
+    #box-4,
+    #box-5,
+    #box-6,
+    #box-7,
+    #box-8,
+    #box-9 {
+        border: 1px solid black;
+        height: 190px;
+        width: 190px;
+        float: left;
+        /* font-size: 20px; */
+
+        text-align: center;
+    }
+
+    #box-1,
+    #box-4,
+    #box-7 {
+        clear: left;
+    }
+
+    #main {
+        margin-left: 190px;
+    }
+</style>
+
+<body>
+
+    <center>
+        <div id="main">
+            <div id="box-1">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-2">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-3">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-4">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-5">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-6">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-7">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-8">
+                <h1 class="first"></h1>
+            </div>
+            <div id="box-9">
+                <h1 class="first"></h1>
+            </div>
+        </div>
+    </center>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var enterName = sessionStorage.getItem("enterName");
+            displayData(enterName);
+        });
+
+        function displayData(data) {
+            var displayElement = document.querySelectorAll('.first');
+
+            displayElement.forEach(function (element) {
+                element.innerText = data;
+            });
+        }
+        document.getElementById("box-1").style.fontFamily = "cursive";
+        document.getElementById("box-2").style.fontFamily = "sofia";
+        document.getElementById("box-3").style.fontFamily = "verdana";
+
+        document.getElementById("box-4").style.fontFamily = "trirong";
+        document.getElementById("box-5").style.fontFamily = "Tangerine";
+        document.getElementById("box-6").style.fontFamily = "Fantasy";
+        document.getElementById("box-7").style.fontFamily = "Times New Roman";
+        document.getElementById("box-8").style.fontFamily = "sans-serif";
+        document.getElementById("box-9").style.fontFamily = "monospace";
+
+
+    </script>
+</body>

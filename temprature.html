@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(65, 209, 180);
+        }
+
+        h1 {
+            color: rgb(246, 16, 16);
+            box-shadow: 1px 5px 1px;
+        }
+
+        .container {
+            margin-top: 10rem;
+            padding-top: 1.5rem;
+            height: 5rem;
+            width: 25rem;
+            /* border: 1px solid red; */
+            background-color: rgb(235, 210, 22);
+            border-radius: 0.5rem;
+        }
+
+        #result {
+            color: rgb(85, 0, 255);
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>[ Degree Calculaor ]</h1>
+        <form class="container" onsubmit="return data()">
+            <input type="submit " id="degree">
+            <button class="btn">Convert</button>
+            <p id="result"></p>
+        </form>
+        <script>
+            function data() {
+                var a = document.getElementById("degree").value;
+                b = (a * 9 / 5) + 32;
+                
+                document.getElementById("result").innerHTML = a + " " + " Degree Celsius " + " = " + b + " Fahrenheit";
+                return false;
+            }
+
+        </script>
+    </center>
+
+</body>
+
+</html>
